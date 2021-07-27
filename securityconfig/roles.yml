@@ -80,6 +80,35 @@ notebooks_full_access:
     - 'cluster:admin/opendistro/notebooks/get'
     - 'cluster:admin/opendistro/notebooks/list'
 
+# Allows users to read Notifications events
+notifications_events_read_access:
+  reserved: true
+  cluster_permissions:
+    - 'cluster:admin/opensearch/notifications/events/get'
+
+# Allows users to read Notifications events, configs, features
+notifications_read_access:
+  reserved: true
+  cluster_permissions:
+    - 'cluster:admin/opensearch/notifications/configs/get'
+    - 'cluster:admin/opensearch/notifications/events/get'
+    - 'cluster:admin/opensearch/notifications/feature/channels/get'
+    - 'cluster:admin/opensearch/notifications/features'
+
+# Allows users to all Notifications functionality
+notifications_full_access:
+  reserved: true
+  cluster_permissions:
+    - 'cluster:admin/opensearch/notifications/configs/create'
+    - 'cluster:admin/opensearch/notifications/configs/delete'
+    - 'cluster:admin/opensearch/notifications/configs/get'
+    - 'cluster:admin/opensearch/notifications/configs/update'
+    - 'cluster:admin/opensearch/notifications/events/get'
+    - 'cluster:admin/opensearch/notifications/feature/channels/get'
+    - 'cluster:admin/opensearch/notifications/feature/send'
+    - 'cluster:admin/opensearch/notifications/features'
+    - 'cluster:admin/opensearch/notifications/send'
+
 # Allows users to read and download Reports
 reports_instances_read_access:
   reserved: true
